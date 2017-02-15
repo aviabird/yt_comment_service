@@ -13,8 +13,9 @@ use Mix.Config
 # which you typically run after static files are built.
 config :yt_comment_service, YtCommentService.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/manifest.json"
+  url: [scheme: "https", host: "pinwork-api.herokuapp.com", port: 443],
+  check_origin: false
+  # cache_static_manifest: "priv/static/manifest.json"
 
 # Do not print debug messages in production
 config :logger, level: :info
